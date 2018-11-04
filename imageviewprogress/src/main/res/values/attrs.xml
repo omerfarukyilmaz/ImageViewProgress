@@ -3,6 +3,25 @@
 
     <declare-styleable name="ImageViewProgress">
         <attr name="src" format="reference" />
+        <!--<attr name="src" format="reference|color" />-->
+        <attr name="adjustViewBounds" format="boolean" />
+        <attr name="scaleType">
+            <enum name="matrix" value="0" />
+            <enum name="fitXY" value="1" />
+            <enum name="fitStart" value="2" />
+            <enum name="fitCenter" value="3" />
+            <enum name="fitEnd" value="4" />
+            <enum name="center" value="5" />
+            <enum name="centerCrop" value="6" />
+            <enum name="centerInside" value="7" />
+        </attr>
+        <!--<attr name="maxWidth" format="dimension" />-->
+        <!--<attr name="maxHeight" format="dimension" />-->
+        <!--<attr name="tint" format="color" />-->
+        <!--<attr name="baselineAlignBottom" format="boolean" />-->
+        <!--<attr name="cropToPadding" format="boolean" />-->
+        <!--<attr name="baseline" format="dimension" />-->
+        <!--<attr name="drawableAlpha" format="integer" />-->
     </declare-styleable>
 
 </resources>
