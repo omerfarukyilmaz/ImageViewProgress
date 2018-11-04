@@ -2,6 +2,7 @@ package com.ofylab.imageviewprogress
 
 import android.content.Context
 import android.util.AttributeSet
+import android.view.View
 import android.widget.ImageView
 import android.widget.ProgressBar
 import android.widget.RelativeLayout
@@ -57,6 +58,14 @@ class ImageViewProgress(context: Context, attrs: AttributeSet) : RelativeLayout(
 //        <attr name="drawableAlpha" format="integer" />
 
         attributes.recycle()
+    }
+
+    fun progressBarGone() {
+        progressBar.visibility = View.GONE
+    }
+
+    fun progressBarVisible() {
+        progressBar.visibility = View.VISIBLE
     }
 
 }
