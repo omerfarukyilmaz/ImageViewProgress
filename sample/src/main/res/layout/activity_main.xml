@@ -9,10 +9,12 @@
     <com.ofylab.imageviewprogress.ImageViewProgress
         android:id="@+id/imageViewProgress"
         android:layout_width="match_parent"
-        android:layout_height="200dp"
+        android:layout_height="300dp"
+        android:layout_centerInParent="true"
         android:visibility="gone"
         app:adjustViewBounds="true"
         app:scaleType="centerCrop"
-        app:src="@drawable/geneva_motor_show" />
+        app:src="@drawable/geneva_motor_show"
+        tools:visibility="visible" />
 
 </RelativeLayout>

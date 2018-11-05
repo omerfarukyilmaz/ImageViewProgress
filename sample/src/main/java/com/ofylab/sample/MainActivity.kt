@@ -23,32 +23,32 @@ class MainActivity : AppCompatActivity() {
         Handler().postDelayed({
             Toast.makeText(this, "User picked an image", Toast.LENGTH_SHORT).show()
             imageViewProgress.visibility = View.VISIBLE
-        }, TimeUnit.SECONDS.toMillis(3))
+        }, TimeUnit.SECONDS.toMillis(2))
 
         Handler().postDelayed({
             Toast.makeText(this, "File is starting to upload", Toast.LENGTH_SHORT).show()
             imageViewProgress.progressBarVisible()
+        }, TimeUnit.SECONDS.toMillis(4))
+
+        Handler().postDelayed({
+            Toast.makeText(this, "File upload progress: 30%", Toast.LENGTH_SHORT).show()
+            imageViewProgress.progressBarProgress(30)
         }, TimeUnit.SECONDS.toMillis(6))
 
         Handler().postDelayed({
-            Toast.makeText(this, "File upload progress: 25%", Toast.LENGTH_SHORT).show()
-            imageViewProgress.progressBarProgress(25)
+            Toast.makeText(this, "File upload progress: 60%", Toast.LENGTH_SHORT).show()
+            imageViewProgress.progressBarProgress(60)
         }, TimeUnit.SECONDS.toMillis(8))
-
-        Handler().postDelayed({
-            Toast.makeText(this, "File upload progress: 75%", Toast.LENGTH_SHORT).show()
-            imageViewProgress.progressBarProgress(75)
-        }, TimeUnit.SECONDS.toMillis(10))
 
         Handler().postDelayed({
             Toast.makeText(this, "File upload progress: 100%", Toast.LENGTH_SHORT).show()
             imageViewProgress.progressBarProgress(100)
-        }, TimeUnit.SECONDS.toMillis(12))
+        }, TimeUnit.SECONDS.toMillis(10))
 
         Handler().postDelayed({
             Toast.makeText(this, "File upload done", Toast.LENGTH_SHORT).show()
             imageViewProgress.progressBarGone()
-        }, TimeUnit.SECONDS.toMillis(15))
+        }, TimeUnit.SECONDS.toMillis(12))
     }
 
 }
