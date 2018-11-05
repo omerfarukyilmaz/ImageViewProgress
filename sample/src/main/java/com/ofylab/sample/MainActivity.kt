@@ -32,14 +32,17 @@ class MainActivity : AppCompatActivity() {
 
         Handler().postDelayed({
             Toast.makeText(this, "File upload progress: 25%", Toast.LENGTH_SHORT).show()
+            imageViewProgress.progressBarProgress(25)
         }, TimeUnit.SECONDS.toMillis(8))
 
         Handler().postDelayed({
             Toast.makeText(this, "File upload progress: 75%", Toast.LENGTH_SHORT).show()
+            imageViewProgress.progressBarProgress(75)
         }, TimeUnit.SECONDS.toMillis(10))
 
         Handler().postDelayed({
             Toast.makeText(this, "File upload progress: 100%", Toast.LENGTH_SHORT).show()
+            imageViewProgress.progressBarProgress(100)
         }, TimeUnit.SECONDS.toMillis(12))
 
         Handler().postDelayed({

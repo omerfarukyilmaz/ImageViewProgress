@@ -13,15 +13,13 @@ class ImageViewProgress(context: Context, attrs: AttributeSet) : RelativeLayout(
     val imageView: ImageView
         get() = imageView_
 
-    val progressBar: ProgressBar
-        get() = progressBar_
-
     init {
         inflate(context, R.layout.image_view_progress, this)
 
         val attributes = context.obtainStyledAttributes(attrs, R.styleable.ImageViewProgress)
 
         imageView.setImageResource(attributes.getResourceId(R.styleable.ImageViewProgress_src, 0))
+//        <attr name="src" format="reference|color" />
 
         imageView.adjustViewBounds = attributes.getBoolean(R.styleable.ImageViewProgress_adjustViewBounds, false)
 
@@ -37,18 +35,6 @@ class ImageViewProgress(context: Context, attrs: AttributeSet) : RelativeLayout(
             else -> ImageView.ScaleType.MATRIX
         }
 
-//        <attr name="src" format="reference|color" />
-//        <attr name="scaleType">
-//        <enum name="matrix" value="0" />
-//        <enum name="fitXY" value="1" />
-//        <enum name="fitStart" value="2" />
-//        <enum name="fitCenter" value="3" />
-//        <enum name="fitEnd" value="4" />
-//        <enum name="center" value="5" />
-//        <enum name="centerCrop" value="6" />
-//        <enum name="centerInside" value="7" />
-//        </attr>
-//        <attr name="adjustViewBounds" format="boolean" />
 //        <attr name="maxWidth" format="dimension" />
 //        <attr name="maxHeight" format="dimension" />
 //        <attr name="tint" format="color" />
@@ -61,11 +47,15 @@ class ImageViewProgress(context: Context, attrs: AttributeSet) : RelativeLayout(
     }
 
     fun progressBarGone() {
-        progressBar.visibility = View.GONE
+        relativeLayoutProgressBar.visibility = View.GONE
     }
 
     fun progressBarVisible() {
-        progressBar.visibility = View.VISIBLE
+        relativeLayoutProgressBar.visibility = View.VISIBLE
+    }
+
+    fun progressBarProgress(percentage: Int) {
+        circularFillableLoaders.progress = percentage
     }
 
 }
